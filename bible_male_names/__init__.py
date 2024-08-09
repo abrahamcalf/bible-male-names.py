@@ -2004,13 +2004,7 @@ def rand():
     return random.choice(BIBLE_MALE_NAMES)
 
 def get(count = 1):
-    names = []
-    for i in range(count):
-        name = None
-        while not name or (name in names):
-            name = rand()
-        names.append(name)
-    return names
+    return random.sample(BIBLE_MALE_NAMES, k=count)
 
 def all():
     return BIBLE_MALE_NAMES
